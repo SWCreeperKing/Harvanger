@@ -1,0 +1,78 @@
+<!--STARTED LEARNING 5/22/2020-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harvanger</title>
+    <link rel="stylesheet" href="HTMLCss.css">
+    <script src="NumberClass.js"></script>
+    <script src="Tab.js"></script>
+    <script src="Player.js"></script>
+    <script src="Game.js"></script>
+</head>
+<body>
+
+<div class="game">
+    <div class="coreGame">
+        <div class="tabContainer" id="mainTabDiv" style="display: none">
+            <button class="mainTabButton active" id="mainGameTabButton"
+                    onclick="openTab('game', 'mainTabs', this, 'mainTabButton')">
+                Game
+            </button>
+            <button hidden class="mainTabButton" id="mainCraftingTabButton"
+                    onclick="openTab('crafting', 'mainTabs', this, 'mainTabButton')">
+                Crafting
+            </button>
+            <button class="mainTabButton"
+                    onclick="openTab('settings', 'mainTabs', this, 'mainTabButton')">
+                Settings
+            </button>
+        </div>
+        <br>
+        <br>
+        <div class="mainTabs" id="game">
+            <button onclick="gather()">Gather</button>
+            <button hidden onclick="mine()" id="mineButton">Mine</button>
+        </div>
+        <div hidden class="mainTabs" id="crafting">
+            <p id="craft"></p>
+        </div>
+        <div hidden class="mainTabs" id="settings">
+            <button onclick="save()">Save</button>
+            <button style="margin-left: 25px; background: #570008" onclick="wipeSave()">
+                Wipe Save
+            </button>
+            <br>
+            <br>
+            <label style="margin-right: 10px">Show Log:</label>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleLog()" id="showLogCheck">
+                <span class="slider"></span>
+            </label>
+            <br>
+            <br>
+            <p id="log"></p>
+        </div>
+    </div>
+
+    <hr style="margin-top: -6px; margin-bottom: -10px">
+
+    <div class="sideGame" style="margin-left: 20px">
+        <div class="tabContainer" id="sideTabsDiv" style="transform: rotate(90deg);
+                    float: right; margin-top: 30px; margin-right: -55px"
+        >
+            <button class="sideTabButton active"
+                    onclick="openTab('inventory', 'sideTabs', this, 'sideTabButton')">
+                Inventory
+            </button>
+        </div>
+        <div id="inventory">
+            <p id="inv"></p>
+        </div>
+    </div>
+</div>
+
+<script>init()</script>
+</body>
+</html>
