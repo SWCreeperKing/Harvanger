@@ -1,3 +1,4 @@
+// disclaimer: not my code
 (function () {
 	'use strict';
 
