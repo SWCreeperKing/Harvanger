@@ -30,10 +30,6 @@ function init() {
 }
 
 function save() {
-    if (isDebugger) {
-        console.log("You opened the console! no saving for you! refresh!")
-        return
-    }
     localStorage.setItem("player", JSON.stringify(player))
 }
 
