@@ -11,6 +11,9 @@ html,body {
     color: #bbbbbb;
 }
 
+a {
+    color: #2196F3;
+}
 
 .game {
     display: grid;
