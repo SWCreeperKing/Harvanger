@@ -29,10 +29,6 @@ function init() {
     update()
 }
 
-function save() {
-    localStorage.setItem("player", JSON.stringify(player))
-}
-
 function wipeSave() {
     if (confirm("Are you sure you want to wipe your save?")) {
         localStorage.removeItem("player")
