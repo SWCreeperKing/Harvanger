@@ -1,4 +1,5 @@
 let past = []
+let isDebugger = false
 
 setInterval(function () {
     document.getElementById("log").hidden = !player.settings.showLog
@@ -6,7 +7,6 @@ setInterval(function () {
     updateLogText()
     updateInv()
 }, 250)
-
 
 function update() {
     switch (player.stage) {
@@ -30,6 +30,10 @@ function init() {
 }
 
 function save() {
+    if (isDebugger) {
+        console.log("You opened the console! no saving for you! refresh!")
+        return
+    }
     localStorage.setItem("player", JSON.stringify(player))
 }
 

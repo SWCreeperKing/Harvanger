@@ -7,6 +7,7 @@
     <title>Harvanger</title>
     <link rel="icon" href="ico.png">
     <link rel="stylesheet" href="HTMLCss.css">
+    <script src="JS/index.js"></script>
     <script src="JS/NumberClass.js"></script>
     <script src="JS/Tab.js"></script>
     <script src="JS/Player.js"></script>
@@ -83,5 +84,14 @@
 </div>
 
 <script>init()</script>
+<script type="module">
+    window.addEventListener('devtoolschange', event => {
+        if (event.detail.isOpen) {
+            Object.freeze(player)
+            isDebugger = true
+            console.log("Wait, opening the console is illegal!")
+        }
+    });
+</script>
 </body>
 </html>
