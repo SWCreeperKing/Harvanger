@@ -16,15 +16,16 @@ let player = {
     settings: {
         showLog: true
     },
-    craftingQueue: [],
+    researchQueue: [],
+    researches: []
 }
 
-let unCrafted = {
+let unResearched = {
     "W1": {
         name: "Workbench", res: [[resourceTypes.WOOD, 20]],
         func: function () {
-            player.craftingQueue.push(unCrafted.G1)
-            player.craftingQueue.push(unCrafted.M1)
+            player.researchQueue.push(unResearched.G1)
+            player.researchQueue.push(unResearched.M1)
         }
     },
     "G1": {
@@ -37,8 +38,8 @@ let unCrafted = {
         name: "Wooden Pickaxe", res: [[resourceTypes.WOOD, 35]],
         func: function () {
             player.stage = 3
-            player.craftingQueue.push(unCrafted.G2)
-            player.craftingQueue.push(unCrafted.M2)
+            player.researchQueue.push(unResearched.G2)
+            player.researchQueue.push(unResearched.M2)
             update()
         }
     },

@@ -7,10 +7,12 @@
     <title>Harvanger</title>
     <link rel="icon" href="ico.png">
     <link rel="stylesheet" href="HTMLCss.css">
-    <script src="NumberClass.js"></script>
-    <script src="Tab.js"></script>
-    <script src="Player.js"></script>
-    <script src="Game.js"></script>
+    <script src="JS/NumberClass.js"></script>
+    <script src="JS/Tab.js"></script>
+    <script src="JS/Player.js"></script>
+    <script src="JS/Action.js"></script>
+    <script src="JS/Research.js"></script>
+    <script src="JS/Game.js"></script>
 </head>
 <body>
 
@@ -27,9 +29,9 @@
                     onclick="openTab('game', 'mainTabs', this, 'mainTabButton')">
                 Game
             </button>
-            <button hidden class="mainTabButton" id="mainCraftingTabButton"
-                    onclick="openTab('crafting', 'mainTabs', this, 'mainTabButton')">
-                Crafting
+            <button hidden class="mainTabButton" id="mainResearchTabButton"
+                    onclick="openTab('researchTab', 'mainTabs', this, 'mainTabButton')">
+                Researching
             </button>
             <button class="mainTabButton"
                     onclick="openTab('settings', 'mainTabs', this, 'mainTabButton')">
@@ -42,8 +44,8 @@
             <button onclick="gather()">Gather</button>
             <button hidden onclick="mine()" id="mineButton">Mine</button>
         </div>
-        <div hidden class="mainTabs" id="crafting">
-            <p id="craft"></p>
+        <div hidden class="mainTabs" id="researchTab">
+            <p id="research"></p>
         </div>
         <div hidden class="mainTabs" id="settings">
             <button onclick="save()">Save</button>
