@@ -3,21 +3,36 @@ const resourceTypes = {
     STONE: 'stone'
 }
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeypress = function (event) {
+    event = (event || window.event)
+    if (event.keyCode === 123) return false
+}
+document.onmousedown = function (event) {
+    event = (event || window.event)
+    if (event.keyCode === 123) return false
+
+}
+document.onkeydown = function (event) {
+    event = (event || window.event)
+    if (event.keyCode === 123) return false
+}
+
 let player = {
-    stage: 0,
-    level: {
-        gather: 1,
-        mine: 1
-    },
-    resources: {
-        wood: 0,
-        stone: 0
-    },
-    settings: {
-        showLog: true
-    },
-    researchQueue: [],
-    researches: []
+        stage: 0,
+        level: {
+            gather: 1,
+            mine: 1
+        },
+        resources: {
+            wood: 0,
+            stone: 0
+        },
+        settings: {
+            showLog: true
+        },
+        researchQueue: [],
+        researches: []
 }
 
 let unResearched = {
