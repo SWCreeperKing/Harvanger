@@ -61,6 +61,7 @@ function update() {
             document.getElementById("mainCraftingTabButton").hidden = false
         case 1:
             document.getElementById("mainTabDiv").style.display = ""
+            document.getElementById("sideGameStuff").style.display = ""
     }
 }
 
